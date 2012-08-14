@@ -8,12 +8,19 @@
   <input type=hidden name=name value="<%= profile.name %>">
 <%
 Object.keys(fields).forEach(function (f) {
+  if(fields[f].label) {
   %>
+  <fieldset>
+    <label for="<%= f %>"><%= fields[f].label %></label>
+    <input id="<%= f %>" name="<%= f %>" value="<%= profile[f] || '' %>">
+  </fieldset>
+  <% } else {%>
   <fieldset>
     <label for="<%= f %>"><%= fields[f] %></label>
     <input id="<%= f %>" name="<%= f %>" value="<%= profile[f] || '' %>">
   </fieldset>
   <%
+  }
 })
 %>
 
