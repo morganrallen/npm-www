@@ -36,22 +36,10 @@ exports.debug = true
 // extra fields we hang on the profile.
 exports.profileFields =
 { fullname: "Full Name"
-, email: {
-    label: "Email",
-    link: "mailto:"
-  }
-, github: {
-    label: "Github Username",
-    link: "https://github.com/"
-  }
-, twitter: {
-    label: "Twitter Username",
-    link: "https://twitter.com/"
-  }
-, homepage: {
-    label: "Homepage URL",
-    link: ""
-}
+, email: "Email"
+, github: "Github Username"
+, twitter: "Twitter Username"
+, homepage: "Homepage URL"
 , freenode: "IRC Handle"
 }
 

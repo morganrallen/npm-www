@@ -27,19 +27,12 @@
 <table width="100%">
 <%
 Object.keys(fields).forEach(function (f) {
-  if(fields[f].label) {
   %>
-  <tr>
-    <th><%= fields[f].label %></th>
-    <td><a href="<%= fields[f].link + showprofile[f] || '' %>"><%= showprofile[f] || '' %></a></td>
-  </tr>
-  <% } else { %>
   <tr>
     <th><%= fields[f] %></th>
     <td><%= showprofile[f] || '' %></td>
   </tr>
   <%
-  }
 })
 %>
 </table>
